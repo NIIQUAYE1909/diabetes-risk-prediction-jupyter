@@ -106,10 +106,9 @@ final model.
 
 ## 5. Tool Used
 
-**Python 3.12** with `pandas`, `numpy`, `scikit-learn`, `matplotlib`, `seaborn`, run inside a
-Jupyter notebook. Chosen over a GUI data mining tool (e.g. RapidMiner/Weka) for full control over
-the preprocessing pipeline — critical for correctly avoiding the leakage issue described above —
-and for reproducibility.
+**Python 3.12** with `pandas`, `numpy`, `scikit-learn`, `matplotlib`, `seaborn`, and `streamlit`.
+The analysis and model training are documented in the Jupyter notebook. A small Streamlit app
+provides a GUI for trying example measurements and exploring the same dataset interactively.
 
 ## 6. Results
 
@@ -187,11 +186,29 @@ Pregnancies (0.32), DiabetesPedigreeFunction (0.21), Age (0.16). See
 
 Both deliverables use the leakage-safe results from the notebook.
 
+## Interactive GUI
+
+The Streamlit app lets you change the eight measurements and see how the selected model responds.
+The **Explore the dataset** tab also lets you choose a feature and view its values grouped by the
+dataset's recorded outcome. The app uses the same Logistic Regression settings and fixed training
+split as the notebook. The saved test scores are shown separately from live examples.
+
+To open the app on Windows, open PowerShell in this project folder and run:
+
+```powershell
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+The install command is needed the first time (and after dependencies change). Streamlit opens the
+GUI in your browser. Stop it by returning to PowerShell and pressing `Ctrl+C`.
+
 ## Project Structure
 
 ```
 diabetes_project/
 ├── README.md                      <- this file
+├── app.py                         <- interactive Streamlit GUI
 ├── requirements.txt
 ├── data/
 │   ├── diabetes_raw.csv           <- original download, no headers
@@ -220,9 +237,8 @@ All scripts resolve paths relative to the project folder, so they can be run fro
 
 ```bash
 pip install -r requirements.txt
-python src/add_headers.py
-python src/01_eda_preprocessing.py
-python src/02_modeling.py
-# or, to see the full narrated analysis:
+# interactive GUI:
+streamlit run app.py
+# or, for the full narrated analysis:
 jupyter notebook notebooks/analysis.ipynb
 ```
