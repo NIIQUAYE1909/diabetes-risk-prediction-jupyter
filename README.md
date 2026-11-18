@@ -183,6 +183,7 @@ Pregnancies (0.32), DiabetesPedigreeFunction (0.21), Age (0.16). See
 
 - [Project report](reports/diabetes_risk_prediction_report.docx)
 - [UMaT-style presentation](reports/diabetes_risk_prediction_presentation.pptx)
+- [Detailed project overview for presentation (PDF)](output/pdf/diabetes_project_overview.pdf)
 
 Both deliverables use the leakage-safe results from the notebook.
 
