@@ -1,10 +1,11 @@
 # Predicting Diabetes Risk from Diagnostic Measurements
 
-A Data Mining Algorithms course project: predicting whether a patient is at risk of diabetes using
+A CE 376 Computer Science & Engineering course project: predicting whether a patient is at risk of diabetes using
 routine, low-cost diagnostic measurements.
 
-**Course:** Data Mining Algorithms
-**Author:** *(add your name)*
+**Course:** CE 376 — Computer Science & Engineering
+**Department:** Computing & Data Analytics, University of Mines and Technology (UMaT)
+**Author:** NII QUAYE KINGSLEY ASARE
 
 ---
 
@@ -19,9 +20,8 @@ diabetes (`Outcome = 1`) or not (`Outcome = 0`), using only 8 routine diagnostic
 (number of pregnancies, glucose level, blood pressure, skin thickness, insulin level, BMI,
 diabetes pedigree function, and age).
 
-Such a model could support doctors and clinics as a **low-cost, first-pass screening tool** to
-flag at-risk patients for further testing. It is explicitly **not** intended to replace a
-clinical diagnosis.
+This is an educational course project using a historical dataset. The model has not been
+validated as a screening or diagnostic tool and must not guide clinical decisions.
 
 ## 2. Dataset
 
@@ -180,6 +180,13 @@ Pregnancies (0.32), DiabetesPedigreeFunction (0.21), Age (0.16). See
   diabetic class.
 - Validate on a larger, more diverse dataset before any real-world use.
 
+## Project Deliverables
+
+- [Project report](reports/diabetes_risk_prediction_report.docx)
+- [UMaT-style presentation](reports/diabetes_risk_prediction_presentation.pptx)
+
+Both deliverables use the leakage-safe results from the notebook.
+
 ## Project Structure
 
 ```
@@ -202,7 +209,9 @@ diabetes_project/
     ├── 01_eda_output.txt
     ├── 02_modeling_output.txt
     ├── model_comparison.csv
-    └── final_model_results.json
+    ├── final_model_results.json
+    ├── diabetes_risk_prediction_report.docx
+    └── diabetes_risk_prediction_presentation.pptx
 ```
 
 ## How to Reproduce
